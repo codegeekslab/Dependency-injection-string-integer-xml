@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="BasicPhone" class="com.codegeekslab.type.BasicPhone" />
+	<bean id="SmartPhone" class="com.codegeekslab.type.SmartPhone" />
+
+	<!-- Below beans are for constructor and setter injection,comment and un-comment 
+		the below beans accordingly -->
+
+	<!-- <bean id="CallingApp" class="com.codegeekslab.app.CallingApp">
+		<constructor-arg ref="SmartPhone" />
+		<constructor-arg value="12345" />
+		<constructor-arg value="whatsapp" />
+	</bean> -->
+	<bean id="CallingApp" class="com.codegeekslab.app.CallingApp">
+		<property name="phone" ref="SmartPhone"></property>
+		<property name="number" value="12345"></property>
+		<property name="app" value="whatsapp"></property>
+	</bean>
+</beans>
