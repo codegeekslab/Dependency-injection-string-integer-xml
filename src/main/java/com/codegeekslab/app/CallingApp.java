@@ -45,7 +45,7 @@ public class CallingApp {
 		this.app = app;
 	}
 
-	public void makeCall() {
+	public void dialNumber() {
 		phone.makeCall(number, app);
 	}
 

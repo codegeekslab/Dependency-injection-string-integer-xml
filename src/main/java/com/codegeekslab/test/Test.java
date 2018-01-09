@@ -8,7 +8,7 @@ import com.codegeekslab.app.CallingApp;
 	public static void main(String[] args) {
 		ApplicationContext context =new GenericXmlApplicationContext("beans.xml");
 		CallingApp callingApp = (CallingApp) context.getBean("CallingApp");
-		callingApp.makeCall();
+		callingApp.dialNumber();
 	 
  	}
 }
